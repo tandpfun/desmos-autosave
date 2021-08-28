@@ -1,12 +1,23 @@
-<div class="button">
-  on
-</div>
-
-<style>
-.button {
-  margin: 15px;
-  padding: 10px;
-  border-radius: 3px;
-  background-color: lightgreen;
-}
-</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="popup.css" />
+	</head>
+	<body>
+		<div class="popupContents">
+			<h1 class="pageTitle">Desmos Auto Save</h1>
+			<div class="pageDescription">
+				<span>Saves graphs every</span>
+				<select id="intervalSelector">
+					<option value="10000">10 seconds</option>
+					<option value="30000">30 seconds</option>
+					<option value="60000">60 seconds</option>
+					<option value="120000">2 minutes</option>
+					<option value="300000">5 minutes</option>
+				</select>
+			</div>
+			<button id="autoSaveToggle" class="settingButton">Loading...</button>
+		</div>
+		<script src="popup.js"></script>
+	</body>
+</html>

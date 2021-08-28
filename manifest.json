@@ -1,19 +1,31 @@
 {
-  "name": "Desmos AutoSave",
-  "version": "1.2",
-  "description": "Automatically save your desmos file every 5 seconds!",
+  "name": "Desmos Auto Save",
+  "version": "1.0",
+  "description": "Automatically save your desmos projects! Never lose your work again.",
   "manifest_version": 3,
   "permissions": ["storage"],
   "background": {
-    "service_worker": "src/worker.js"
+    "service_worker": "worker.js"
   },
   "action": {
-    "default_popup": "src/popup.html"
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "/img/desmos_autosave16.png",
+      "32": "/img/desmos_autosave32.png",
+      "48": "/img/desmos_autosave48.png",
+      "128": "/img/desmos_autosave128.png"
+    }
   },
   "content_scripts": [
     {
       "matches": ["https://*.desmos.com/calculator/*"],
       "js": ["src/autosaver.js"]
     }
-  ]
+  ],
+  "icons": {
+    "16": "/img/desmos_autosave16.png",
+    "32": "/img/desmos_autosave32.png",
+    "48": "/img/desmos_autosave48.png",
+    "128": "/img/desmos_autosave128.png"
+  }
 }
