@@ -1,0 +1,19 @@
+{
+  "name": "Desmos AutoSave",
+  "version": "1.2",
+  "description": "Automatically save your desmos file every 5 seconds!",
+  "manifest_version": 3,
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "src/worker.js"
+  },
+  "action": {
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.desmos.com/calculator/*"],
+      "js": ["src/autosaver.js"]
+    }
+  ]
+}
