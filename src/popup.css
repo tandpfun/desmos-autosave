@@ -1,41 +1,42 @@
 html {
-	width: 260px;
+  width: 260px;
 }
 
 button {
-	padding: 12px;
-	outline: none;
-	margin: 10px;
-	border: none;
-	border-radius: 3px;
-	color: white;
-	font-weight: bold;
-	transition-duration: 0.15s;
+  padding: 12px;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  transition-duration: 0.15s;
+  cursor: pointer;
 }
 
 button.current {
-	box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px black;
 }
 
 .popupContents {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .pageTitle {
-	font-weight: bold;
-	text-align: center;
-	margin: 0;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
 }
 
 .pageDescription {
-	font-weight: normal;
-	font-size: 13px;
-	text-align: center;
-	margin: 0;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
 }
 
 .settingButton {
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
