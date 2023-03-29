@@ -1,6 +1,6 @@
 {
   "name": "Desmos Auto Save",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Automatically save your Desmos projects! Never lose your work again.",
   "manifest_version": 3,
   "permissions": ["storage"],

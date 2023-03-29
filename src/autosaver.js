@@ -6,7 +6,8 @@ let saveTimeout;
 function saveDocument({ autoSaveInterval, autoSaveEnabled }) {
   if (
     regex.test(window.location.href) &&
-    !document.getElementsByClassName('dcg-sign-in')?.[0]
+    !document.querySelector('.dcg-sign-in') &&
+    !document.querySelector('span.dcg-action-save.tooltip-offset.dcg-disabled')
   ) {
     if (autoSaveEnabled) {
       if (isApple())
@@ -24,7 +25,8 @@ function saveDocument({ autoSaveInterval, autoSaveEnabled }) {
         }. Saving again in ${autoSaveInterval}.`
       );
     }
-  } else console.log(`[Desmos Auto Save] Not saving: Not signed in`);
+  } else
+    console.log(`[Desmos Auto Save] Not saving: No changes, or not signed in`);
 
   saveTimeout = setTimeout(() => {
     chrome.storage.sync.get(
